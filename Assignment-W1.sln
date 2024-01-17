@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34408.163
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linq_Methods", "Linq_Methods\Linq_Methods.csproj", "{19CE66EB-2B4D-4060-93D3-D521C1638E13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp-W1", "WebApp-W1\WebApp-W1.csproj", "{3032B5BE-EBC2-40CD-8256-125166D04399}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{19CE66EB-2B4D-4060-93D3-D521C1638E13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19CE66EB-2B4D-4060-93D3-D521C1638E13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19CE66EB-2B4D-4060-93D3-D521C1638E13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19CE66EB-2B4D-4060-93D3-D521C1638E13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3032B5BE-EBC2-40CD-8256-125166D04399}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3032B5BE-EBC2-40CD-8256-125166D04399}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3032B5BE-EBC2-40CD-8256-125166D04399}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3032B5BE-EBC2-40CD-8256-125166D04399}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BBD63643-23FF-4AA5-9721-821513C956F9}
+	EndGlobalSection
+EndGlobal
