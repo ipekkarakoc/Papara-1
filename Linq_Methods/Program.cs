@@ -21,9 +21,10 @@ namespace LinqMethods
                 new Person {Name = "zeynep", Age = 48, Gender = "female", Job = "engineer", MaritalStatus = "single", Salary = 16500},
                 new Person {Name = "ilkay", Age = 36, Gender = "female", Job = "nurse", MaritalStatus = "married", Salary = 12000},
             };
-            
+
             #region Where
-            
+            //Returns values from the collection based on a predicate function
+
             var resultWhere = persons.Where(p => p.Age > 30 && p.Salary > 10000);
 
             
@@ -32,8 +33,10 @@ namespace LinqMethods
                 Console.WriteLine(person.Name); 
             }
             #endregion
-            
+
             #region OrderBy
+            //Sorts the elements in the collection based on specified fields in ascending or decending order
+
             Console.WriteLine("**************");
             
             var resultOrderby = persons.OrderBy(p => p.Name);
@@ -43,10 +46,14 @@ namespace LinqMethods
                 Console.WriteLine(person.Name);
             }
             #endregion
+
             #region Select
-            
+            //It is used to format the result of the query as per our requirement
+
             Console.WriteLine("**************");
+            
             var resultSelect = persons.Select(p => p.Salary*30/100);
+            
             foreach (var person in resultSelect)
             {
                 Console.WriteLine(person);
@@ -55,7 +62,10 @@ namespace LinqMethods
             #endregion
 
             #region GroupBy
+            //Returns groups of elements based on some key value
+
             Console.WriteLine("**************");
+            
             var resultGroupby = persons.GroupBy(p => p.Job);
             
             foreach (var person in resultGroupby)
@@ -69,21 +79,16 @@ namespace LinqMethods
                 Console.WriteLine();
             }
             #endregion
-
         }
-
-
-    }
-            
+    }         
     public class Person
     {
         public string Name { get; set; }
-        public int Age { get; set; }
+        public short Age { get; set; }
         public string Gender { get; set; }
         public string Job { get; set; }
-        public int Salary { get; set; }
+        public double Salary { get; set; }
         public string MaritalStatus { get; set; }
-
     }
 }
 
