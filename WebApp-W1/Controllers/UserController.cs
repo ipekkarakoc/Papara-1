@@ -30,20 +30,20 @@ namespace WebApp_W1.Controllers
             return Ok(user);
         }
         
-        [HttpPost]
+        [HttpPost("Add")]
         public IActionResult Add()
         {
             return Created("", new User { Id = 1, Name = "Aylin", Surname = "Kara", Age = 25 });
         }
 
-        [HttpPut]
+        [HttpPut("Update")]
         public IActionResult Update()
         {
             return NoContent();
             
         }
 
-        [HttpDelete]
+        [HttpDelete("Delete")]
         public IActionResult Delete()
         {
             return NoContent();
