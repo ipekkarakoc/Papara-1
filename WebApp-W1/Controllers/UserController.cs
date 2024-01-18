@@ -11,18 +11,29 @@ namespace WebApp_W1.Controllers
     {
         public readonly IUserService userService = new UserService(new UserRepository());
 
-        [HttpGet]
+        [HttpGet("GetAll")]
         public IActionResult GetAll()
         {
             return Ok(userService.GetAll());
+        }
+
+        [HttpGet("GetById")]
+        public IActionResult GetById(int id)
+        {
+            var user = userService.GetById(id);
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(user);
         }
         
         [HttpPost]
         public IActionResult Add()
         {
-            //degistir
-            return Created("", new User { Id = 1, Name = "Product 3", Surname="abc", Age = 2 });
-
+            return Created("", new User { Id = 1, Name = "Aylin", Surname = "Kara", Age = 25 });
         }
 
         [HttpPut]
@@ -37,5 +48,7 @@ namespace WebApp_W1.Controllers
         {
             return NoContent();
         }
+
+
     }
 }

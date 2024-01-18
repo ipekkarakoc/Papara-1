@@ -11,9 +11,9 @@ namespace WebApp_W1.Services
             if (Users.Count == 0)
             {
                 Users.Add(new User { Id = 1, Name = "İpek", Surname = "Karakoç", Age = 24 });
-                Users.Add(new User { Id = 2, Name = "", Surname = "", Age = 100 });
-                Users.Add(new User { Id = 3, Name = "", Surname = "", Age = 100 });
-                Users.Add(new User { Id = 4, Name = "", Surname = "", Age = 100 });
+                Users.Add(new User { Id = 2, Name = "Ali", Surname = "Korkmaz", Age = 48 });
+                Users.Add(new User { Id = 3, Name = "Enver", Surname = "Yılmaz", Age = 30 });
+                Users.Add(new User { Id = 4, Name = "İrem", Surname = "Aydın", Age = 18 });
             }
         }
         public User Add(User user)
@@ -28,6 +28,11 @@ namespace WebApp_W1.Services
             Users.RemoveAt(userToDeleteIndex);
         }
 
+        public User GetById(int id)
+        {
+            return Users.FirstOrDefault(u => u.Id == id);
+        }
+
         public List<User> GetAll()
         {
             return Users;
@@ -36,11 +41,13 @@ namespace WebApp_W1.Services
         public void Update(User user)
         {
             var userToUpdateIndex = Users.FindIndex(u => u.Id == user.Id);
-            //search
-            Users[userToUpdateIndex].Name = user.Name;
-            Users[userToUpdateIndex].Surname = user.Surname;
-            Users[userToUpdateIndex].Age = user.Age;
-
+            
+            if (userToUpdateIndex != null) 
+            { 
+                Users[userToUpdateIndex].Name = user.Name;
+                Users[userToUpdateIndex].Surname = user.Surname;
+                Users[userToUpdateIndex].Age = user.Age;
+            }
         }
     }
 }
